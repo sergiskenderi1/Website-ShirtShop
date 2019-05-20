@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Welcome</title>
+	<h:outputStylesheet library="css" name="welcomePage.css" />
+</h:head>
+<h:body styleClass="main">
+	<h:form>
+		<h:panelGrid columns="1" styleClass="bigPanel">
+			<p:graphicImage value="/resources/images/EniLabel.PNG" width="150"
+				height="70" styleClass="image" />
+			<h:outputLabel value="Can you feel it ? Shirts."
+				styleClass="bigLabel"></h:outputLabel>
+		</h:panelGrid>
+		<br></br>
+		<p:contentFlow value="#{imagesView.images}"  var="image">
+			<p:graphicImage value="/resources/images/#{image}"
+				styleClass="content" />
+		</p:contentFlow>
+		<br></br>
+		<br></br>
+		<h:panelGrid columns="4" cellpadding="40" cellspacing="50"
+			styleClass="bigPanel">
+			<p:graphicImage value="/resources/images/tshirt9.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt3.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt10.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt11.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt1.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt6.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt7.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt8.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt2.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt5.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt4.jpg" width="150"
+				height="170" />
+			<p:graphicImage value="/resources/images/tshirt12.jpg" width="150"
+				height="170" />
+		</h:panelGrid>
+		<h:panelGrid columns="3" cellpadding="20" styleClass="miniFooter">
+			<h:outputLabel value="INFORMATION" styleClass="labelFont"></h:outputLabel>
+			<h:outputLabel value="CONTACTS" styleClass="labelFont"></h:outputLabel>
+			<h:outputLabel value="EMAILS" styleClass="labelFont"></h:outputLabel>
+			<h:outputLabel value="Rr.'Ismail Qemali'" styleClass="label"></h:outputLabel>
+			<h:outputLabel value="+355692345678" styleClass="label"></h:outputLabel>
+			<h:outputLabel value="sss.aaa@asdf.com" styleClass="label"></h:outputLabel>
+			<br></br>
+		</h:panelGrid>
+	</h:form>
+	<ui:insert name="footer">
+		<ui:include src="/resources/templates/footer.xhtml"></ui:include>
+	</ui:insert>
+</h:body>
+</html>

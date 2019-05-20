@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Welcome</title>
+	<h:outputStylesheet library="css" name="welcomePage.css" />
+</h:head>
+<h:body styleClass="main">
+	<br></br>
+	<br></br>
+	<br></br>
+	<p:contentFlow value="#{imagesView.images}" var="image">
+		<p:graphicImage value="/resources/images/#{image}"
+			styleClass="content" />
+	</p:contentFlow>
+    <br></br>
+    <br></br>
+    <h:panelGrid columns="3" cellpadding="40" cellspacing="50" styleClass="bigPanel">
+     <p:graphicImage value="/resources/images/tshirt1.jpg" width="350" height="370"/>
+	   <p:graphicImage value="/resources/images/tshirt10.jpg" width="350" height="370"/>
+	   <p:graphicImage value="/resources/images/tshirt11.jpg" width="350" height="370"/>
+	   <p:graphicImage value="/resources/images/tshirt8.jpg" width="350" height="370"/>
+	   <p:graphicImage value="/resources/images/tshirt9.jpg" width="350" height="370"/>
+	   <p:graphicImage value="/resources/images/tshirt2.jpg" width="350" height="370"/>
+	    </h:panelGrid>
+</h:body>
+</html>

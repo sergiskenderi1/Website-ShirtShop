@@ -1,0 +1,49 @@
+.main{
+	background-color: white;
+}
+
+.bigPanel{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.centeredFooterBar{
+	position: fixed; bottom : 0px;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	color: white !important;
+	background: #c9c9c9!important;
+	margin-bottom: 0 !important;
+	width: 100% !important;
+	font-size: 13px !important;
+	font-weight: bold !important;
+	padding-left: 450px !important;
+	bottom: 0px;
+}
+
+.miniFooter{
+	background-color: #eeeeee;
+	width : 100%;
+	text-align: center;
+}
+
+.labelFont{
+	font-style: italic;
+	font-size: small;
+}
+
+.label{
+	font-style: normal;
+	font-size:small;
+}
+
+.bigLabel{
+	font-style: italic;
+	font-size:x-large;
+	margin: 0 auto;
+	font-variant: small-caps;
+}
+
+.image{
+	background-color: #F0FFFF;
+}
