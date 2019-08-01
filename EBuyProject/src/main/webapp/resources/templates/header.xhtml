@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<h:outputStylesheet
+	name="webjars/font-awesome/4.4.0/css/font-awesome.css" />
+<title>Header</title>
+</head>
+<body>
+	<ui:composition>
+		<p:breadCrumb styleClass="centeredMenuBar">
+			<p:menuitem value="Categories" />
+			<p:menuitem value="HOME " url="newWelcome.xhtml" />
+			<p:menuitem value="MAN " url="manCategory.xhtml" />
+			<p:menuitem value="WOMEN" url="#" />
+			<p:menuitem value="POLO " url="#" />
+			<p:menuitem value="T-SHIRT " url="#" />
+		</p:breadCrumb>
+	</ui:composition>
+</body>
+</html>

@@ -8,6 +8,7 @@
 <h:head>
 	<title>Welcome</title>
 	<h:outputStylesheet library="css" name="welcomePage.css" />
+	<h:outputStylesheet library="css" name="headerAndFooter.css" />
 </h:head>
 <h:body styleClass="main">
 	<h:form>
@@ -18,7 +19,7 @@
 				styleClass="bigLabel"></h:outputLabel>
 		</h:panelGrid>
 		<br></br>
-		<p:contentFlow value="#{imagesView.images}"  var="image">
+		<p:contentFlow value="#{imagesView.images}" var="image">
 			<p:graphicImage value="/resources/images/#{image}"
 				styleClass="content" />
 		</p:contentFlow>

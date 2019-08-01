@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Welcome</title>
+	<h:outputStylesheet library="css" name="welcomePage.css" />
+	<h:outputStylesheet library="css" name="headerAndFooter.css" />
+</h:head>
+<h:body styleClass="main">
+	<h:form>
+		<h:panelGrid columns="1" styleClass="bigPanel">
+			<p:graphicImage value="/resources/images/EniLabel.PNG" width="150"
+				height="70" styleClass="image" />
+			<h:outputLabel value="Can you feel it ? Shirts."
+				styleClass="bigLabel"></h:outputLabel>
+		</h:panelGrid>
+		<ui:insert name="header">
+			<ui:include src="/resources/templates/header.xhtml"></ui:include>
+		</ui:insert>
+		<br></br>
+		<h:panelGrid columns="2" styleClass="PhotoPanel">
+			<p:graphicImage value="/resources/images/Boy1.jpg" width="400"
+				height="700" />
+			<p:graphicImage value="/resources/images/Boy2.jpg" width="300"
+				height="500" styleClass="Photo1" />
+			<h:outputText value="Size: S , M , L " styleClass="labelOfPrice1"></h:outputText>
+			<h:outputText value="Size: S , M , L "
+				style="margin-left:310px;
+			font-style: italic;font-size: small;"></h:outputText>
+			<h:outputText value="Price:20,000$" styleClass="labelOfPrice1"></h:outputText>
+			<h:outputText value="Price:10,000$"
+				style="margin-left:310px;
+			font-style: italic;font-size: small;"></h:outputText>
+		</h:panelGrid>
+		<br></br>
+		<h:panelGrid columns="2" styleClass="PhotoPanel">
+			<p:graphicImage value="/resources/images/Boy3.jpg" width="400"
+				height="500" style="margin-left:100px;" />
+			<p:graphicImage value="/resources/images/Boy4.jpg" width="500"
+				height="650" style="margin-left:100px;" />
+			<h:outputText value="Size: S , M , L "
+				style="margin-left:270px;
+			font-style: italic;font-size: small;"></h:outputText>
+			<h:outputText value="Size: S , M , L "
+				style="margin-left:310px;
+			font-style: italic;font-size: small;"></h:outputText>
+			<h:outputText value="Price:20,000$"
+				style="margin-left:270px;
+			font-style: italic;font-size: small;"></h:outputText>
+			<h:outputText value="Price:10,000$"
+				style="margin-left:310px;
+			font-style: italic;font-size: small;"></h:outputText>
+		</h:panelGrid>
+		<br></br>
+		<h:panelGrid calumns="1" style="margin: 0 auto;">
+		<p:imageSwitch effect="shuffle" >
+			<ui:repeat value="#{imagesView.images4}" var="images">
+				<p:graphicImage value="/resources/images/#{images}" />
+			</ui:repeat>
+		</p:imageSwitch>
+		<h:outputText value="Size: S , M , L "
+				style="margin-left:240px;
+			font-style: italic;font-size: small;"></h:outputText>
+		<h:outputText value="Price:20,000$"
+				style="margin-left:240px;
+			font-style: italic;font-size: small;"></h:outputText>
+		</h:panelGrid>
+		<br></br>
+		<br></br>
+		<h:panelGrid columns="2" style="margin: 0 auto;">
+		<p:graphicImage value="/resources/images/Boy8.jpg" width="400"
+				height="500" />
+			<p:graphicImage value="/resources/images/Boy9.jpg" width="400"
+				height="500" style="margin-left:100px;" />
+			<h:outputText value="Size: S , M , L "
+				style="margin-left:160px;
+			font-style: italic;font-size: small;"></h:outputText>
+			<h:outputText value="Size: S , M , L "
+				style="margin-left:270px;
+			font-style: italic;font-size: small;"></h:outputText>
+			<h:outputText value="Price:20,000$"
+				style="margin-left:160px;
+			font-style: italic;font-size: small;"></h:outputText>
+			<h:outputText value="Price:10,000$"
+				style="margin-left:270px;
+			font-style: italic;font-size: small;"></h:outputText>
+		</h:panelGrid>
+		<br></br>
+		<h:panelGrid columns="3" cellpadding="20" styleClass="miniFooter">
+			<h:outputLabel value="INFORMATION" styleClass="labelFont"></h:outputLabel>
+			<h:outputLabel value="CONTACTS" styleClass="labelFont"></h:outputLabel>
+			<h:outputLabel value="EMAILS" styleClass="labelFont"></h:outputLabel>
+			<h:outputLabel value="Rr.'Ismail Qemali'" styleClass="label"></h:outputLabel>
+			<h:outputLabel value="+355692345678" styleClass="label"></h:outputLabel>
+			<h:outputLabel value="sss.aaa@asdf.com" styleClass="label"></h:outputLabel>
+			<br></br>
+		</h:panelGrid>
+	</h:form>
+	<ui:insert name="footer">
+		<ui:include src="/resources/templates/footer.xhtml"></ui:include>
+	</ui:insert>
+</h:body>
+</html>

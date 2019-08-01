@@ -8,24 +8,107 @@
 <h:head>
 	<title>Welcome</title>
 	<h:outputStylesheet library="css" name="welcomePage.css" />
+	<h:outputStylesheet library="css" name="headerAndFooter.css" />
 </h:head>
 <h:body styleClass="main">
-	<br></br>
-	<br></br>
-	<br></br>
-	<p:contentFlow value="#{imagesView.images}" var="image">
-		<p:graphicImage value="/resources/images/#{image}"
-			styleClass="content" />
-	</p:contentFlow>
-    <br></br>
-    <br></br>
-    <h:panelGrid columns="3" cellpadding="40" cellspacing="50" styleClass="bigPanel">
-     <p:graphicImage value="/resources/images/tshirt1.jpg" width="350" height="370"/>
-	   <p:graphicImage value="/resources/images/tshirt10.jpg" width="350" height="370"/>
-	   <p:graphicImage value="/resources/images/tshirt11.jpg" width="350" height="370"/>
-	   <p:graphicImage value="/resources/images/tshirt8.jpg" width="350" height="370"/>
-	   <p:graphicImage value="/resources/images/tshirt9.jpg" width="350" height="370"/>
-	   <p:graphicImage value="/resources/images/tshirt2.jpg" width="350" height="370"/>
-	    </h:panelGrid>
+	<h:form>
+		<h:panelGrid columns="1" styleClass="bigPanel">
+			<p:graphicImage value="/resources/images/EniLabel.PNG" width="150"
+				height="70" styleClass="image" />
+			<h:outputLabel value="Can you feel it ? Shirts."
+				styleClass="bigLabel"></h:outputLabel>
+		</h:panelGrid>
+		<ui:insert name="header">
+			<ui:include src="/resources/templates/header.xhtml"></ui:include>
+		</ui:insert>
+		<p:contentFlow value="#{imagesView.images}" var="image">
+			<p:graphicImage value="/resources/images/#{image}"
+				styleClass="content" />
+		</p:contentFlow>
+		<br></br>
+		<br></br>
+		<h:panelGrid columns="2" styleClass="ourLooks">
+			<p:graphicImage value="/resources/images/Shirtsss.jpg"
+				styleClass="imageOnPanel" />
+			<h:outputText
+				value="We create your style . &lt;br /&gt; 
+		 We make you feel great. &lt;br /&gt; 
+		 Let your shirts do the Walking."
+				escape="false" styleClass="labelOnPanel"></h:outputText>
+		</h:panelGrid>
+		<br></br>
+		<h:panelGrid columns="2" styleClass="PhotoPanel">
+			<p:graphicImage value="/resources/images/Photo1.jpg" width="400"
+				height="500" />
+			<p:graphicImage value="/resources/images/Photo2.jpg" width="400"
+				height="500" styleClass="Photo1" />
+			<h:outputText value="Size: S , M , L " styleClass="labelOfPrice1"></h:outputText>
+			<h:outputText value="Size: S , M , L " styleClass="labelOfPrice2"></h:outputText>
+			<h:outputText value="Price:20,000$" styleClass="labelOfPrice1"></h:outputText>
+			<h:outputText value="Price:10,000$" styleClass="labelOfPrice2"></h:outputText>
+		</h:panelGrid>
+		<br></br>
+		<h:panelGrid columns="1" styleClass="PhotoPanel">
+			<p:graphicImage value="/resources/images/Photo3.jpg" width="500"
+				height="600" />
+			<h:outputText value="Size: S , M , L "
+				style="margin-left: 220px;font-style: italic;
+	font-size: small;"></h:outputText>
+			<h:outputText value="Price:30,000$"
+				style="margin-left: 220px;font-style: italic;
+	font-size: small;"></h:outputText>
+		</h:panelGrid>
+		<br></br>
+		<h:panelGrid columns="2">
+		<p:imageSwitch effect="fade" id="fadeEffect" styleClass="fadeStyle">
+			<ui:repeat  value="#{imagesView.images2}" var="images1">
+				<p:graphicImage value="/resources/images/#{images1}"/>
+			</ui:repeat>
+		</p:imageSwitch>
+		<p:imageSwitch effect="fade" id="fadeEffect1" styleClass="fadeStyle">
+			<ui:repeat  value="#{imagesView.images3}" var="images3">
+				<p:graphicImage value="/resources/images/#{images3}"/>
+			</ui:repeat>
+		</p:imageSwitch>
+		<h:outputText value="Size: S , M , L "
+				style="margin-left: 300px;font-style: italic;
+	font-size: small;"></h:outputText>
+	<h:outputText value="Size: S , M , L "
+				style="margin-left: 300px;font-style: italic;
+	font-size: small;"></h:outputText>
+	<h:outputText value="Price7,000$"
+				style="margin-left: 300px;font-style: italic;
+	font-size: small;"></h:outputText>
+	<h:outputText value="Price:10,000$"
+				style="margin-left: 300px;font-style: italic;
+	font-size: small;"></h:outputText>
+		</h:panelGrid>
+		<br></br>
+		<p:separator style="width:120px;color:black;margin-left:300px;"/>
+		<h:panelGrid columns="2" styleClass="aboutUs">
+		<h:outputText
+				value="Ready to take your style &lt;br /&gt; 
+		 to the next level?  &lt;br /&gt;
+		 Stop by, &lt;br /&gt;
+		 or reach out using the contact below."
+				escape="false" styleClass="labelOnPanel2"></h:outputText>
+			<p:graphicImage value="/resources/images/Shirtss.jpg"
+				styleClass="imageOnPanel2" />
+		</h:panelGrid>
+		<p:separator style="width:180px;color:black;"/>
+		<br></br>
+		<h:panelGrid columns="3" cellpadding="20" styleClass="miniFooter">
+			<h:outputLabel value="INFORMATION" styleClass="labelFont"></h:outputLabel>
+			<h:outputLabel value="CONTACTS" styleClass="labelFont"></h:outputLabel>
+			<h:outputLabel value="EMAILS" styleClass="labelFont"></h:outputLabel>
+			<h:outputLabel value="Rr.'Ismail Qemali'" styleClass="label"></h:outputLabel>
+			<h:outputLabel value="+355692345678" styleClass="label"></h:outputLabel>
+			<h:outputLabel value="sss.aaa@asdf.com" styleClass="label"></h:outputLabel>
+			<br></br>
+		</h:panelGrid>
+	</h:form>
+	<ui:insert name="footer">
+		<ui:include src="/resources/templates/footer.xhtml"></ui:include>
+	</ui:insert>
 </h:body>
 </html>

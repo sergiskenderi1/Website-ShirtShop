@@ -1,49 +1,85 @@
-.main{
+.main {
 	background-color: white;
 }
 
-.bigPanel{
+.bigPanel {
 	text-align: center;
 	margin: 0 auto;
 }
 
-.centeredFooterBar{
-	position: fixed; bottom : 0px;
-	padding-top: 10px !important;
-	padding-bottom: 10px !important;
-	color: white !important;
-	background: #c9c9c9!important;
-	margin-bottom: 0 !important;
-	width: 100% !important;
-	font-size: 13px !important;
-	font-weight: bold !important;
-	padding-left: 450px !important;
-	bottom: 0px;
-}
-
-.miniFooter{
-	background-color: #eeeeee;
-	width : 100%;
-	text-align: center;
-}
-
-.labelFont{
+.bigLabel {
 	font-style: italic;
-	font-size: small;
-}
-
-.label{
-	font-style: normal;
-	font-size:small;
-}
-
-.bigLabel{
-	font-style: italic;
-	font-size:x-large;
+	font-size: x-large;
 	margin: 0 auto;
 	font-variant: small-caps;
 }
 
-.image{
+.image {
 	background-color: #F0FFFF;
+}
+
+.imageOnPanel{
+  height: 220px;
+  width:100%;	
+  margin-left: 10px;
+}
+
+.ourLooks {
+	margin: 0 auto;
+	background-color: #303030;
+	width: 50%;
+	height : 300px;
+	text-align:center;
+}
+
+.labelOnPanel{
+	font-style: italic;
+	font-size: x-large;
+	font-variant: small-caps;
+	color: white;
+}
+
+.PhotoPanel{
+	margin: 0 auto;
+}
+
+.Photo1{
+	margin-left:200px;
+}
+
+.labelOfPrice1{
+	margin-left: 130px;
+	font-style: italic;
+	font-size: small;
+}
+
+.labelOfPrice2{
+	margin-left:360px;
+	font-style: italic;
+	font-size: small;
+}
+
+.fadeStyle{
+	margin-left: 30px;
+}
+
+.aboutUs{
+	margin: 0 auto;
+	background-color: #ffffff;
+	width: 50%;
+	height : 270px;
+	text-align:center;
+}
+
+.labelOnPanel2{
+	font-style: italic;
+	font-size: x-large;
+	font-variant: small-caps;
+	color: black;
+}
+
+.imageOnPanel2{
+  height: 270px;
+  width:100%;	
+  margin-left: 10px;
 }
